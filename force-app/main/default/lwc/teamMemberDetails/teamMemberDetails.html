@@ -1,0 +1,24 @@
+<template>
+	<div class="slds-border_top">
+		<lightning-layout multiple-rows="true">
+			<lightning-layout-item padding="horizontal-small" size="6" >
+				Name:
+			</lightning-layout-item>
+			<lightning-layout-item padding="horizontal-small" size="6" >
+				<lightning-formatted-text value={memberData.Name}></lightning-formatted-text>
+			</lightning-layout-item>
+			<lightning-layout-item padding="horizontal-small" size="6" >
+				Team:
+			</lightning-layout-item>
+			<lightning-layout-item padding="horizontal-small" size="6" >
+				<lightning-formatted-text value={memberData.Team__r.Name}></lightning-formatted-text>
+			</lightning-layout-item>
+			<lightning-layout-item padding="horizontal-small" size="6" >
+				Skills:
+			</lightning-layout-item>
+			<lightning-layout-item padding="horizontal-small" size="6" >
+				<lightning-formatted-text value={memberData.Skills__c}></lightning-formatted-text>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+</template>

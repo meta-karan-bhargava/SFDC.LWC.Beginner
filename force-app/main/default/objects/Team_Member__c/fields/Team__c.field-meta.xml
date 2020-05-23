@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+	<fullName>Team__c</fullName>
+	<description>The team to which this member belongs to.</description>
+	<externalId>false</externalId>
+	<inlineHelpText>The team to which this member belongs to.</inlineHelpText>
+	<label>Team</label>
+	<referenceTo>Team__c</referenceTo>
+	<relationshipLabel>Team Members</relationshipLabel>
+	<relationshipName>Team_Members</relationshipName>
+	<relationshipOrder>0</relationshipOrder>
+	<reparentableMasterDetail>false</reparentableMasterDetail>
+	<trackTrending>false</trackTrending>
+	<type>MasterDetail</type>
+	<writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

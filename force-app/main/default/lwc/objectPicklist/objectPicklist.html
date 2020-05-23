@@ -1,0 +1,25 @@
+<template>
+	<template if:true={requiredByParent}>
+		<lightning-combobox
+			name="teamList"
+			label="Team"
+			value={value}
+			placeholder="Choose a Team"
+			options={options}
+			onchange={handleChange} 
+			variant="label-inline"
+			required>
+		</lightning-combobox>
+	</template>
+	<template if:false={requiredByParent}>
+		<lightning-combobox
+			name="teamList"
+			label="Team"
+			value={value}
+			placeholder="Choose a Team"
+			options={options}
+			onchange={handleChange} 
+			variant="label-inline">
+		</lightning-combobox>
+	</template>
+</template>

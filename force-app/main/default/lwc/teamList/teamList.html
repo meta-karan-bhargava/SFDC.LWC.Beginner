@@ -1,0 +1,28 @@
+<template>
+	<lightning-card>
+		<h3 slot="title">
+			Team List
+		</h3>
+		<div class="slds-box slds-m-around_medium">
+			<template if:true={loading} >
+				<c-overlay-spinner></c-overlay-spinner>
+			</template>
+			<!-- custom lookup component for Team -->
+			<c-object-picklist object-api-name="Team__c" onselected={handleSelect}>
+				</c-object-picklist>
+
+			<template if:true={memberDetails}>
+				<template for:each={memberDetails} for:item="member">
+					<c-team-member-details key={member.Id} member-data={member}>
+						</c-team-member-details>
+				</template>
+			</template>
+
+			<template if:false={memberDetails}>
+				<p class="slds-align_absolute-center">
+					No Data Found !
+				</p>
+			</template>
+		</div>
+	</lightning-card>
+</template>
