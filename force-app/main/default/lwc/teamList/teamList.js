@@ -11,7 +11,11 @@ export default class TeamList extends LightningElement {
 			teamId : this.teamId
 		})
 		.then(data => {
-			this.memberDetails = data;
+			if(data.length) {
+				this.memberDetails = data;
+			} else {
+				this.memberDetails = null;
+			}
 			this.loading=false;
 		})
 		.catch(error => {

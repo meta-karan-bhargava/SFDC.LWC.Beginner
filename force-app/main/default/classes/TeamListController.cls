@@ -6,7 +6,8 @@ public class TeamListController {
 	
 	@AuraEnabled
 	public static List<SObject> getMemberRecords(Id teamId) {
-		String query = 'SELECT Id, Name, Skills__c, Team__r.Name FROM Team_Member__c WHERE Team__c = :teamId';
+		Integer limitOfRecords = Limits.getLimitDmlRows();
+		String query = 'SELECT Id, Name, Skills__c, Team__r.Name FROM Team_Member__c WHERE Team__c = :teamId ORDER BY Name LIMIT :limitOfRecords';
 		return Database.query(query);
 	}
 

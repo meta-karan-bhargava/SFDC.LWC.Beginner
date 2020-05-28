@@ -24,6 +24,11 @@
 		<enabled>true</enabled>
 	</classAccesses>
 	<custom>false</custom>
+	<fieldPermissions>
+		<editable>true</editable>
+		<field>Team_Member__c.Skills__c</field>
+		<readable>true</readable>
+	</fieldPermissions>
 	<layoutAssignments>
 		<layout>Team_Member__c-Team Member Layout</layout>
 	</layoutAssignments>
@@ -50,6 +55,10 @@
 	</objectPermissions>
 	<tabVisibilities>
 		<tab>Team__c</tab>
+		<visibility>DefaultOn</visibility>
+	</tabVisibilities>
+	<tabVisibilities>
+		<tab>Teams_App</tab>
 		<visibility>DefaultOn</visibility>
 	</tabVisibilities>
 	<userLicense>Salesforce</userLicense>

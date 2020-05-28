@@ -10,19 +10,20 @@
 			<!-- custom lookup component for Team -->
 			<c-object-picklist object-api-name="Team__c" onselected={handleSelect}>
 				</c-object-picklist>
-
-			<template if:true={memberDetails}>
-				<template for:each={memberDetails} for:item="member">
-					<c-team-member-details key={member.Id} member-data={member}>
-						</c-team-member-details>
+			<div class="slds-scrollable scroll-container">
+				<template if:true={memberDetails}>
+					<template for:each={memberDetails} for:item="member">
+						<c-team-member-details key={member.Id} member-data={member}>
+							</c-team-member-details>
+					</template>
 				</template>
-			</template>
 
-			<template if:false={memberDetails}>
-				<p class="slds-align_absolute-center">
-					No Data Found !
-				</p>
-			</template>
+				<template if:false={memberDetails}>
+					<p class="slds-align_absolute-center">
+						No Team Members found!
+					</p>
+				</template>
+			</div>
 		</div>
 	</lightning-card>
 </template>
