@@ -9,8 +9,8 @@
 
 
 ## Application Part
-# Tab name - Team
+### Tab name - Team
 	Create Team__c records.
-# Tab Name - Teams App
+### Tab Name - Teams App
 	Add Team_Members__c records.
 	View records for a particular team.
